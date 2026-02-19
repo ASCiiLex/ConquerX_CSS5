@@ -1,0 +1,76 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden; /* mejora profesional */
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__title {
+    margin-top: t.$space-md;
+    font-size: t.$fs-heading-m;
+    font-weight: t.$fw-bold;
+  }
+
+  &__tech {
+    margin-top: t.$space-xs;
+    font-size: t.$fs-body-l;
+    color: t.$color-text-secondary;
+  }
+
+  &__actions {
+    display: flex;
+    gap: t.$space-md;
+    margin-top: t.$space-sm;
+  }
+
+  /* Overlay oculto por defecto */
+  &__overlay {
+    display: none;
+  }
+}
+
+/* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+
+  .card {
+
+    &__actions--mobile {
+      display: none;
+    }
+
+    &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* 🔥 CLAVE REAL */
+    &__overlay &__actions {
+      flex-direction: column;
+      align-items: center;
+      gap: t.$space-xl;
+    }
+
+    &__image-wrapper:hover &__overlay {
+      opacity: 1;
+    }
+  }
+}

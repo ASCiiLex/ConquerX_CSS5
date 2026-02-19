@@ -1,0 +1,65 @@
+// =========================
+// BREAKPOINTS
+// =========================
+
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+
+// =========================
+// COLORS
+// =========================
+
+$color-background-primary: #151515;
+$color-background-secondary: #242424;
+$color-text-primary: #FFFFFF;
+$color-text-secondary: #D9D9D9;
+$color-primary: #4EE1A0;
+$color-error: red;
+
+// =========================
+// TYPOGRAPHY
+// =========================
+
+$font-primary: 'Space Grotesk', sans-serif;
+
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-heading-xl: 88px;
+$fs-heading-l: 48px;
+$fs-heading-m: 24px;
+$fs-body-l: 18px;
+
+$lh-heading-xl: 88px;
+$lh-heading-l: 56px;
+$lh-heading-m: 32px;
+$lh-body-l: 28px;
+
+$ls-heading-xl: -2.5px;
+$ls-heading-l: -1.5px;
+
+// =========================
+// SPACING
+// =========================
+
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+
+// =========================
+// MOTION
+// =========================
+
+$transition-base: 0.3s ease;
+
+// =========================
+// LAYOUT
+// =========================
+
+$container-mobile: 410px;
+$container-tablet: 720px;
+$container-max-width: 1300px;

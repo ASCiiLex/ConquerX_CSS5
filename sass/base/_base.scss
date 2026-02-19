@@ -1,0 +1,15 @@
+@use '../abstracts' as a;
+
+body {
+  background-color: a.$color-background-primary;
+  color: a.$color-text-primary;
+  font-family: a.$font-primary;
+  font-weight: a.$fw-medium;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+

@@ -1,0 +1,53 @@
+@use '../abstracts/tokens' as t;
+
+.form-group {
+  position: relative;
+  margin-bottom: t.$space-lg;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid t.$color-text-secondary;
+  padding: t.$space-sm 0;
+  color: t.$color-text-primary;
+  font-size: t.$fs-body-l;
+  line-height: t.$lh-body-l;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+/* Focus state */
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid t.$color-primary;
+}
+
+/* ---------- VALIDATION STATES ---------- */
+
+/* Solo mostrar error cuando el usuario ha escrito algo */
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+  border-bottom: 1px solid t.$color-error;
+}
+
+/* Mostrar mensaje de error */
+input:not(:placeholder-shown):invalid + .form-error,
+textarea:not(:placeholder-shown):invalid + .form-error {
+  display: block;
+}
+
+/* Mensaje */
+.form-error {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  font-size: 12px;
+  color: t.$color-error;
+}
+

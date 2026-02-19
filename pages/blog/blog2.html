@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descubre más | Conquer Blocks</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Descubre lo último en FullStack y Blockchain Developer">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+    <header>
+    <figure>
+      <img width="250px"  src="../img/common/logo-Conquer-Blocks.avif" alt="Logotipo de Conquer Blocks">
+    </figure>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../quienes-somos.html">Quienes somos</a></li>
+        <li><a href="../cursos.html">Cursos</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../registro.html">Registro</a></li>
+        <li><a href="../login.html">Login</a></li>
+        <li><a href="../contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h1>Ejemplos de diferentes Blockchain: Ethereum vs Hyperledger</h1>
+    </section>
+
+    <section>
+      <article>
+        <p>
+          La tecnología blockchain está revolucionando la forma que tenemos de realizar transacciones económicas y de compartir información. Para muchas empresas de todos los sectores, esta tecnología está suponiendo un punto de inflexión ya que la blockchain permite automatizar procesos, realizar transacciones inmediatas y seguras punto a punto y muchas cosas más. Y todo, sin la necesidad de intermediarios.
+        </p>
+        <p>
+          En Conquer Blocks ya hemos escrito varias veces sobre los tipos de blockchain que existen en el mundo de la tecnología. Tenemos principalmente, las redes públicas (que son la mayoría) y las redes privadas. Los dos tipos comparten características muy importantes, pero se diferencian en aspectos clave. Por eso en el artículo de hoy, vamos a explicar las diferencias que hay entre las dos grandes blockchain de cada tipo: Ethereum para las redes públicas, y Hyperledger, para las redes privadas.
+      </p>
+
+        <h2>Blockchain pública vs. Blockchain privada</h2>
+
+        <p>
+          Para hacer una comparativa entre ambas redes, primero es necesario entender, aunque sea a grandes rasgos, en qué ámbito se mueve cada una.
+        </p>
+        <p>
+          Las dos, son plataformas de blockchain de código abierto.
+        </p>
+        <p>
+          En el caso de Hyperledger, que es probablemente la más desconocida, es una plataforma fundada por la Linux Foundation y su diseño está pensado para ser utilizado en el ámbito empresarial, ya que hyperledger permite construir redes permisionadas.
+        </p>
+        <p>
+          Por otro lado, Ethereum, es una plataforma completamente pública y permite que literalmente cualquier persona, pueda desarrollar o interactuar cn los smart contracts desarrollados en ella.
+        </p>
+        <p>
+          Así que como veis, partimos de una diferencia bastante clara entre ambas y es la forma que tenemos de acceder a la información en ambas redes, que un caso es completamente libre y en el otro, necesitamos permisos.
+      </p>
+
+        <img width="350px" src="../img/blog/blog2/pub-vs-priv.jpeg" alt="Pública-vs-Privada">
+
+        <p>
+          Este es un punto clave que las empresas tienen en cuenta a la hora de aplicar la tecnología blockchain en sus actividades comerciales, y va a depender mucho de los requerimientos de cada proyecto el uso de una u otra. Por ejemplo, Hyperledger se usa mucho en ámbitos internos de las empresas, para gestionar información que sea confidencial y crítica para la empresa. Por otro lado, Ethereum y sus redes derivadas, es más adecuado para el desarrollo de aplicaciones descentralizadas cuya información almacenada no supone un peligro para la empresa o para los propios usuarios que interactúan con ellas.
+        </p>
+
+        <h2>Algoritmo de Consenso</h2>
+
+        <p>
+          Otro de los puntos claves a tener en cuenta a la hora de elegir una red u otra es la escalabilidad y el rendimiento de la cadena. Y aquí también hay diferencias fundamentales entre ambas redes.
+        </p>
+        <p>
+          Si hablamos de Hyperledger Fabric, nos encontramos con una red que utiliza un mecanismo de consenso que se lama Practical Byzantine Fault Tolerance. Este algoritmo garantiza la tolerancia a las conocidas fallas bizantinas. Estas fallas bizantinas, en el contexto de la tecnología, se refieren a errores de un sistema que tienen lugar cuando los nodos que forman parte de este sistema funcionan de forma incorrecta y envían información errónea o contradictoria. A muchos probablemente os suene este nombre porque deriva de la famosa paradoja del “problema bizantino”.
+      </p>
+
+        <img width="350px" src="../img/blog/blog2/Byzantine-Fault-Tolerance.png" alt="Problema-Bizantino">
+        
+        <p>
+          Este algoritmo de consenso garantiza un procesamiento bastante rápido de las transacciones y por lo tanto, un rendimiento bastante elevado alto.
+        </p>
+        <p>
+          En Ethereum, se utiliza a día de hoy un mecanismo de consenso conocido como prueba de participación o Proof of stake, y digo a día de hoy porque hasta hace muy poco tiempo esto no era así. Antes, el mecanismo utilizado era la famosa prueba de trabajo, que era un mecanismo súper seguro, pero también muy lento y poco escalable. Y por temas de sostenibilidad y también para mejorar el rendimiento y la escalabilidad  se cambió a esta prueba de participación.
+        </p>
+        <p>
+          Es importante conocer ambos algoritmos de consenso para saber cómo funciona la red en la que estamos trabajando, pero en principio no es un factor determinante para elegir una u otra. De hecho, este mecanismo de consenso suele depender de cómo sea la red y de la confianza que haya entre los participantes. Si es privada vamos a estar ante una red más pequeña y es probable que los participantes confíen entre sí, así que aquí es habitual tener el Practical Byzantine fault tolerance, y si es pública los participantes de la red no confían nada entre sí, son anónimos, así que lo más común es el Proof of stake.
+      </p>
+
+        <h2>Términos de privacidad y seguridad</h2>
+
+        <p>
+          Dos características que son fundamentales también a la hora de elegir una red u otra, son al seguridad y la privacidad. Si empezamos con Hyperledger, es una red que proporciona funciones de seguridad sólidas que incluyen cosas tan importantes para las empresas como la gestión de identidades, el control de acceso a los datos y también el cifrado de estos datos. Esto para las empresas es muy valioso porque pueden designar diferentes permisos para diferentes acciones.
+        </p>
+        <p>
+          En cuanto a Ethereum, al ser una plataforma pública que no limita el acceso de usuarios , puede parecer que es más insegura  y sobretodo menos privada, pero esto realmente no es así. De hecho, precisamente porque es una red pública, se centra muchísimo mas en la transparencia pero salvaguardando siempre la privacidad. Aún así, para poder tener lo mejor de los dos mundos por así decirlo, se está trabajando para mejorar todavía más este ámbito y han surgido pro ejemplo soluciones de capa 2 que ofrecen ventajas de privacidad que realizan cálculos y almacenan datos fuera de la cadena principal  para reducir la exposición de ciertos datos que podrían ser sensibles.
+        </p>
+        <p>
+          Como veis, ambas redes tienen sus cosas buenas y también sus debilidades. Pero el propósito general de las dos es aumentar la seguridad, la automatización y la eficiencia de algunos procesos. Una lo hace de manera privada y más confidencial y la otra lo hace de forma pública y transparente. Así que la elección de una plataforma u otra, realmente va a depender de lo que el proyecto requiera
+        </p>
+
+        <h2>Máster de Desarrollo Blockchain de Conquer Blocks</h2>
+
+        <p>
+          Las dos redes son una apuesta segura, y conocerlas y saber desarrollar en ambas es una habilidad que te va a aportar un valor profesional increíble.
+        </p>
+        <p>
+          Habitualmente, los desarrolladores Blockchain únicamente se limitan a dar soluciones de blockchain privadas. Y esto no es malo, de hecho, la filosofía inicial de esta tecnología es puramente pública, pero las necesidades de las empresas no siempre se pueden cubrir con este tipo de desarrollos. Hay muchos datos que son críticos y que no pueden ser publicados en ninguna red a la que cualquier persona pueda acceder.
+        </p>
+        <p>
+          Aquí es donde entran las redes privadas, para cubrir el mercado que las redes públicas no pueden.
+        </p>  
+        <p>
+          La buena noticia es que Hyperledger, soporta desarrollos en lenguajes como Solidity, así que conociendo este lenguaje, es sencillo dar soluciones de ambos tipos.
+        </p>
+        <p>
+          Por eso en Conquer Blocks, hemos optado por este lenguaje en nuestro Master de Desarrollo Blockchain, aunque si nos conocéis un poco, ya sabéis que no nos gusta limitarnos, así que además de Solidity, impartimos otros lenguajes de desarrollo blockchain que van a convertir a nuestros alumnos en los profesionales más preparados del mercado.
+        </p>
+        <p>
+          Si quieres saber qué impartimos en nuestra formación, accede al link y descubre cuál es nuestra metodología para convertirte en todo un desarrollador blockchain.
+        </p>
+
+        <h3>Accede al máster de desarrollo blockchain de Conquer Blocks, <a href="../cursos/cursos2.html">pulsa aquí</a>.</h3>
+
+      </article>
+    </section>
+  </main>
+
+  
+  <footer>
+    © Conquer Blocks 2026 - <a href="../aviso-legal.html">Aviso Legal</a>
+  </footer>
+
+</body>
+
+</html>

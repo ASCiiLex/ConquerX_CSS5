@@ -1,0 +1,21 @@
+@use 'tokens' as t;
+
+@mixin breakpoint($size) {
+  @if $size == tablet {
+    @media (min-width: t.$bp-tablet) {
+      @content;
+    }
+  }
+
+  @else if $size == desktop {
+    @media (min-width: t.$bp-desktop) {
+      @content;
+    }
+  }
+
+  @else if $size == desktop-xl {
+    @media (min-width: t.$bp-desktop-xl) {
+      @content;
+    }
+  }
+}

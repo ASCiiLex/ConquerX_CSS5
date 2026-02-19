@@ -1,0 +1,15 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: t.$color-text-secondary;
+  
+}
+
+.divider--mobile {
+  @include m.breakpoint(tablet) {
+    display: none;
+  }
+}

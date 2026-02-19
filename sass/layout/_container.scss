@@ -1,0 +1,14 @@
+@use '../abstracts/tokens' as t;
+
+.container {
+  width: 100%;
+  max-width: t.$container-max-width;
+  margin: 0 auto;
+  padding: 0 t.$space-sm;
+}
+
+@media (min-width: t.$bp-tablet) {
+  .container {
+    padding: 0 t.$space-lg;
+  }
+}

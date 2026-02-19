@@ -1,0 +1,29 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.footer {
+  padding: t.$space-xl t.$space-sm;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: t.$space-xl;
+  border-top: 1px solid t.$color-text-secondary;
+
+  &__title {
+    font-size: t.$fs-heading-m;
+  }
+
+  &__text {
+    max-width: 45ch;
+    margin: 0 auto;
+    font-size: t.$fs-body-l;
+    line-height: t.$lh-body-l;
+    color: t.$color-text-secondary;
+  }
+}
+
+@include m.breakpoint(tablet) {
+  .footer {
+    padding: t.$space-xl t.$space-lg;
+  }
+}

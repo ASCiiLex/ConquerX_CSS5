@@ -1,0 +1,29 @@
+@use '../abstracts/tokens' as t;
+
+
+body {
+  font-family: t.$font-primary;
+  font-weight: t.$fw-medium;
+  font-size: t.$fs-body-l;
+  line-height: t.$lh-body-l;
+}
+
+h1 {
+  font-size: t.$fs-heading-xl;
+  line-height: t.$lh-heading-xl;
+  letter-spacing: t.$ls-heading-xl;
+  font-weight: t.$fw-bold;
+}
+
+h2 {
+  font-size: t.$fs-heading-l;
+  line-height: t.$lh-heading-l;
+  letter-spacing: t.$ls-heading-l;
+  font-weight: t.$fw-bold;
+}
+
+h3 {
+  font-size: t.$fs-heading-m;
+  line-height: t.$lh-heading-m;
+  font-weight: t.$fw-bold;
+}

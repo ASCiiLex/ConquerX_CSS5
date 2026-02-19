@@ -1,0 +1,44 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.projects {
+
+  /* ---------- HEADER (TITLE + BTN INLINE ALWAYS) ---------- */
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: t.$space-md;
+    margin-top: t.$space-lg;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  /* ---------- GRID ---------- */
+  &__grid {
+    margin-top: t.$space-lg;
+    display: grid;
+    gap: t.$space-lg;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+  .projects {
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+/* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+  .projects {
+    padding: t.$space-xl 0;
+  }
+}

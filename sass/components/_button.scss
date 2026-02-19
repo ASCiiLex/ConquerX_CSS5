@@ -1,0 +1,32 @@
+@use '../abstracts/tokens' as t;
+
+.btn {
+  display: inline-block;
+  padding-bottom: t.$space-xs;
+
+  font-family: t.$font-primary;
+  font-weight: t.$fw-bold;
+  font-size: t.$fs-body-l;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: t.$color-text-primary;
+  text-decoration: none;
+
+  background: none;
+  border: none;
+  border-bottom: 2px solid t.$color-primary;
+
+  cursor: pointer;
+  transition: color t.$transition-base;
+
+  &:hover {
+    color: t.$color-primary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid t.$color-primary;
+    outline-offset: 4px;
+  }
+}

@@ -1,0 +1,18 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.logo {
+  font-weight: t.$fw-bold;
+  color: t.$color-text-primary;
+  text-decoration: none;
+
+  // Mobile
+  font-size: t.$fs-heading-m;
+  line-height: t.$lh-heading-m;
+
+  @include m.breakpoint(tablet) {
+    font-size: t.$fs-heading-l;
+    line-height: t.$lh-heading-l;
+  }
+}
+

@@ -1,0 +1,202 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.hero {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+
+  background-image: url('../../img/mob/pattern-rings.png');
+  background-repeat: no-repeat;
+  background-position: left 0px top 0px;
+
+  /* ===== IMAGEN ===== */
+
+  &__image-wrapper {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transform: translateY(-35%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__image {
+    max-width: 250px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  /* ===== CONTENIDO ===== */
+
+  .container {
+    position: relative;
+    z-index: 2; //
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: t.$fs-heading-l;
+    line-height: t.$lh-heading-l;
+    padding-top: 250px;
+    max-width: 400px;
+
+  }
+
+  
+  &__text {
+    margin-top: t.$space-md;
+    max-width: 34ch;
+  }
+
+  .btn {
+    margin-top: t.$space-lg;
+    margin-bottom: t.$space-xl;
+  }
+
+  /* ===== OVAL ===== */
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 129px;
+    height: 129px;
+    background-image: url('../../img/mob/Oval.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    right: 0;
+    transform: translateX(50%);
+    top: 120px;
+
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+.hero__title span {
+  position: relative;
+  display: inline-block;
+}
+
+.hero__title span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 6px;
+  background-color: t.$color-primary;
+  z-index: -1;
+}
+
+.tablet-break {
+    display: none;
+  }
+
+
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+  .hero {
+    min-height: 550px;
+
+    background-image: url('../../img/tab/pattern-rings.png');
+    background-position: left 0px top 0px;
+
+    .container {
+      align-items: flex-start;
+      text-align: left;
+      padding-top: t.$space-xl;
+    }
+
+    &__content {
+      max-width: 600px;
+    }
+
+    &__title {
+      padding-top: 0;
+      font-size: t.$fs-heading-xl;
+      line-height: t.$lh-heading-xl;
+      letter-spacing: t.$ls-heading-xl;
+      max-width: 600px;
+    }
+
+    /* ocultar imagen mobile */
+    &__image-wrapper {
+      display: none;
+    }
+
+    &::after {
+      right: 0;
+      transform: translateX(50%);
+      top: 350px;
+    }
+
+    &__text {
+      max-width: 450px;
+    }
+  }
+
+  .hero__title span::after {
+    bottom: -10px;
+  }
+
+  .tablet-break {
+    display: block;
+  }
+
+  
+}
+
+
+/* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+  .hero {
+    min-height: 720px;
+
+    background-image: url('../../img/des/pattern-rings-xl.png');
+    background-position: left 0px top 60px;
+
+    &::after {
+      width: 200px;
+      height: 200px;
+
+      background-image: url('../../img/des/Oval.png');
+
+      right: 45%;
+      top: 420px;
+
+      z-index: 0;
+    }
+
+    &__content {
+      max-width: 720px;
+      padding-top: t.$space-xl;
+    }
+
+    &__title {
+      font-size: t.$fs-heading-xl;
+      line-height: t.$lh-heading-xl;
+      letter-spacing: t.$ls-heading-xl;
+      max-width: 800px;
+    }
+
+    &__text {
+      max-width: 420px;
+    }
+  }
+  .tablet-break {
+    display: none;
+  }
+  
+}

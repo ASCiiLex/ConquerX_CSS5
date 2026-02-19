@@ -1,0 +1,11 @@
+@use '../abstracts' as t;
+
+
+html * {
+   font-family: t.$font-primary;
+ 
+}
+ 
+body {
+    overflow-x: hidden;
+} 
