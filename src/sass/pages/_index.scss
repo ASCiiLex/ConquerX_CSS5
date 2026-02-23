@@ -1,7 +1,9 @@
+// Páginas principales
 @forward 'home';
-@forward 'blog-detalle';
 @forward 'contenido';
-@forward 'curso-detalle';
 @forward 'contacto';
 @forward 'quienes-somos';
 
+// Páginas de detalle
+@forward 'blog-detalle';
+@forward 'curso-detalle';
