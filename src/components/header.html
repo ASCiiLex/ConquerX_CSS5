@@ -1,11 +1,23 @@
-  <header>
-    <figure>
-        <a href="/">
-            <img src="/logo-Conquer-Blocks.avif" alt="Logotipo de Conquer Blocks" 
-            width="250px">
-        </a>
+<header class="site-header">
+  <div class="header-inner">
+
+    <figure class="logo">
+      <a href="/">
+        <img 
+          src="/logo-Conquer-Blocks.avif" 
+          alt="Logotipo de Conquer Blocks"
+          width="250"
+        />
+      </a>
     </figure>
-    <nav>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="site-navigation" class="site-nav">
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/pages/quienes-somos.html">Quienes somos</a></li>
@@ -16,5 +28,7 @@
         <li><a href="/pages/contacto.html">Contacto</a></li>
       </ul>
     </nav>
-  </header>
+    <div class="nav-overlay"></div>
+  </div>
+</header>
   
