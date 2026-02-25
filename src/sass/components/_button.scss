@@ -1,32 +1,33 @@
 @use '../abstracts/tokens' as t;
 
 .btn {
-  display: inline-block;
-  padding-bottom: t.$space-xs;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
 
-  font-family: t.$font-primary;
-  font-weight: t.$fw-bold;
-  font-size: t.$fs-body-l;
+  
 
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
 
-  color: t.$color-text-primary;
+  font-weight: 600;
   text-decoration: none;
 
-  background: none;
   border: none;
-  border-bottom: 2px solid t.$color-primary;
-
   cursor: pointer;
-  transition: color t.$transition-base;
+
+  transition: all 0.2s ease-in-out;
+}
+
+
+.btn--primary {
+  background-color: t.$color-background-button;
+  color: t.$color-text-secondary;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 
   &:hover {
-    color: t.$color-primary;
-  }
-
-  &:focus-visible {
-    outline: 2px solid t.$color-primary;
-    outline-offset: 4px;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
   }
 }

@@ -1,7 +1,7 @@
 @use '../abstracts/tokens' as t;
 
 .section {
-  padding-block: t.$space-xl;
+  padding-block: t.$space-sm;
 }
 
 @media (min-width: t.$bp-tablet) {
