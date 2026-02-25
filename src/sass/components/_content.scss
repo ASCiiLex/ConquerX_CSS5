@@ -1,0 +1,59 @@
+@use '../abstracts/tokens' as t;
+
+.content {
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-xl;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-sm;
+  }
+
+  &__title {
+    font-size: t.$fs-heading-m;
+    line-height: t.$lh-heading-m;
+    font-weight: t.$fw-bold;
+    color: t.$color-text-primary;
+  }
+
+  &__intro {
+    font-size: t.$fs-body-l;
+    line-height: t.$lh-body-l;
+    color: t.$color-text-primary;
+    max-width: 45ch;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-lg;
+  }
+
+  &__footer {
+    margin-top: t.$space-md;
+  }
+
+  &__more {
+    font-size: t.$fs-body-l;
+    font-weight: t.$fw-medium;
+    text-decoration: none;
+    color: t.$color-primary;
+
+    transition: t.$transition-base;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* ========= VARIANTES FUTURAS ========= */
+
+.content--cursos {}
+
+.content--blog {}

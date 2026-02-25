@@ -56,45 +56,85 @@
       </div>
     </section>
     
-    <section class="section cursos"> <!--Cursos-->
-      <div class="container">
-        <h2>Últimos cursos</h2>
-        <p>Descubre lo último de nuestra plataforma en nuestros cursos actualizados.</p>
+    <section class="section content content--cursos"> <!--Cursos-->
+      <div class="container content__inner">
 
-        <article>
-          <h3>Curso Desarrollo FullStack</h3>
-          <p>Aprende todos los fundamentos de la web</p>
-            <p><a href="/pages/cursos/cursos1.html">Ver curso</a></p>
-        </article>
+        <header class="content__header">
+          <h2 class="content__title">Últimos cursos</h2>
+          <p class="content__intro">
+            Descubre lo último de nuestra plataforma en nuestros cursos actualizados.
+          </p>
+        </header>
 
-        <article>
-          <h3>Curso Desarrollo Blockchain</h3>
-          <p>Aprende todos los fundamentos de la Blockchain</p>
-            <p><a href="/pages/cursos/cursos2.html">Ver curso</a></p>
-        </article>
-        
-        <p>Si quieres ver todos nuestros cursos haz <a href="/pages/cursos.html">click aquí</a></p>
+        <div class="content__list">
+
+          <article class="card">
+            <img class="card__media" src="src/assets/img/cursos/FullStack.avif" alt="Curso Desarrollo FullStack">
+            <div class="card__body">
+              <h3 class="card__title">Curso Desarrollo FullStack</h3>
+              <p class="card__text">Aprende todos los fundamentos de la web.</p>
+              <a class="btn btn--primary card__cta" href="/pages/cursos/cursos1.html">Ver curso</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="src/assets/img/cursos/Blockchain.avif" alt="Curso Desarrollo Blockchain">
+            <div class="card__body">
+              <h3 class="card__title">Curso Desarrollo Blockchain</h3>
+              <p class="card__text">Aprende todos los fundamentos de la Blockchain.</p>
+              <a class="btn btn--primary card__cta" href="/pages/cursos/cursos2.html">Ver curso</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="content__footer">
+          <a href="/pages/cursos.html" class="btn btn--primary card__cta">
+            Ver todos los cursos
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <section class="section blog"> <!--Blog-->
-      <div class="container">
-        <h2>Últimas noticias</h2>
-        <p>Descubre lo último en FullStack y Blockchain en nuestro blog.</p>
+    <section class="section content content--blog"> <!--Blog-->
+      <div class="container content__inner">
 
-        <article>
-          <h3>Lo último en Desarrollo FullStack</h3>
-          <p>Para estar a la última en el mundo web</p>
-            <p><a href="/pages/blog/blog1.html">Ver noticia</a></p>
-        </article>
+        <header class="content__header">
+          <h2 class="content__title">Últimas noticias</h2>
+          <p class="content__intro">
+            Descubre lo último en FullStack y Blockchain en nuestro blog.
+          </p>
+        </header>
 
-        <article>
-          <h3>Lo último en Blockchain</h3>
-          <p>Mantente al día de los cambios acerca de la Blockchain</p>
-            <p><a href="/pages/blog/blog2.html">Ver noticia</a></p>
-        </article>
-        
-        <p>Si quieres ver todos nuestros post haz <a href="/pages/blog/">click aquí</a></p>
+        <div class="content__list">
+
+          <article class="card">
+            <img class="card__media" src="src/assets/img/blog/flujo.jpg" alt="Noticia Desarrollo FullStack">
+            <div class="card__body">
+              <h3 class="card__title">Lo último en Desarrollo FullStack</h3>
+              <p class="card__text">Para estar a la última en el mundo web.</p>
+              <a class="btn btn--primary card__cta" href="/pages/blog/blog1.html">Ver noticia</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="src/assets/img/blog/eth.png" alt="Noticia Blockchain">
+            <div class="card__body">
+              <h3 class="card__title">Lo último en Blockchain</h3>
+              <p class="card__text">Mantente al día de los cambios acerca de la Blockchain.</p>
+              <a class="btn btn--primary card__cta" href="/pages/blog/blog2.html">Ver noticia</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="content__footer">
+          <a href="/pages/blog/" class="btn btn--primary card__cta">
+            Ver todas las noticias
+          </a>
+        </div>
+
       </div>
     </section>
 
