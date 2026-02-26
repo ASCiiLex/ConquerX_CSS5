@@ -1,4 +1,5 @@
 @use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
 
 .card {
   display: flex;
@@ -38,3 +39,31 @@
   line-height: t.$lh-body-l;
   color: t.$color-text-primary;
 }
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+
+  .card {
+    border: 1px solid t.$color-background-button;
+    box-shadow: 0 8px 24px t.$color-background-secondary;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 562px;
+    max-width: 562px;
+
+    &__title {
+      font-size: t.$fs-body-xl;
+    }
+
+    &__text {
+      font-size: t.$fs-body-xl;
+    }    
+
+  }
+
+}
+
+
+
+/* ================= DESKTOP ================= */

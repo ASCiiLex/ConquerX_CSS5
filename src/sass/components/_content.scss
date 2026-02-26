@@ -1,4 +1,5 @@
 @use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
 
 .content {
 
@@ -57,13 +58,33 @@
   }
 }
 
-/* ========= VARIANTES FUTURAS ========= */
-
-.content--cursos {}
-
-.content--blog {}
-
 .content__cta {
   font-weight: t.$fw-bold;
   padding: t.$space-md;
 }
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+  .content {
+    padding-block: t.$space-lg;
+
+    &__intro {
+      order: 2;
+      font-size: t.$fs-body-2xl;
+      line-height: t.$lh-body-xl;
+    }
+
+    &__list {
+      order: 3;
+      gap: t.$space-xl;
+      padding-bottom: t.$space-xl;
+    }
+  }
+  
+}
+
+
+
+/* ================= DESKTOP ================= */
