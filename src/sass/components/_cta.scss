@@ -24,6 +24,27 @@
 /* ================= TABLET ================= */
 
 @include m.breakpoint(tablet) {
+
+  .cta {
+    background: t.$color-background-secondary;
+    color: t.$color-text-secondary;
+    padding: 5rem 0;
+    text-align: center;
+
+    &__title {
+      
+    }
+
+    &__text {
+      font-size: t.$fs-body-xl;
+    }
+  }
+
+  .cta__content {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
   .cta__title {
     display: block;
   }

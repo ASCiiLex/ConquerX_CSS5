@@ -1,4 +1,5 @@
 @use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
 
 .btn {
   display: inline-flex;
@@ -49,3 +50,21 @@
 .btn--block {
   width: 100%;
 }
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+
+  .btn--primary {
+    font-size: t.$fs-body-xl;
+
+  }
+
+}
+
+
+
+
+
+/* ================= DESKTOP ================= */
