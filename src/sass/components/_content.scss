@@ -5,11 +5,11 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: t.$space-xl;
   }
 
   &__header {
     display: flex;
+    order: 1;
     flex-direction: column;
     gap: t.$space-sm;
   }
@@ -19,23 +19,27 @@
     line-height: t.$lh-heading-m;
     font-weight: t.$fw-bold;
     color: t.$color-text-primary;
+    padding-bottom: t.$space-sm;
   }
 
   &__intro {
+    order: 3;
     font-size: t.$fs-body-l;
     line-height: t.$lh-body-l;
     color: t.$color-text-primary;
-    max-width: 45ch;
+    padding-bottom: t.$space-sm;
   }
 
   &__list {
     display: flex;
+    order: 2;
     flex-direction: column;
     gap: t.$space-lg;
   }
 
   &__footer {
-    margin-top: t.$space-md;
+    order: 4;
+    margin-bottom: t.$space-md;
   }
 
   &__more {
@@ -57,3 +61,8 @@
 .content--cursos {}
 
 .content--blog {}
+
+.content__cta {
+  font-weight: t.$fw-bold;
+  padding: t.$space-md;
+}

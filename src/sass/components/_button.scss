@@ -4,7 +4,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 0.5px;
 
   padding: t.$space-sm t.$space-md;
   border-radius: 12px;
@@ -18,18 +17,35 @@
   transition: t.$transition-base;
 }
 
+/* 🔥 PRIMARY – Marca */
 
 .btn--primary {
+  background-color: t.$color-primary;
+  color: t.$color-text-primary;
+  font-weight: t.$fw-bold;
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: t.$color-background-button;
+    color: t.$color-text-secondary;
+    filter: brightness(0.95);
+  }
+}
+
+/* ⚪ SECONDARY – Oscuro */
+
+.btn--secondary {
   background-color: t.$color-background-button;
   color: t.$color-text-secondary;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 
-    &:hover {
-      &:hover {
-      background-color: t.$color-primary;
-      color: t.$color-text-primary;
-        transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-    }
+  &:hover {
+    background-color: t.$color-primary;
+    color: t.$color-text-primary;
   }
+}
+
+/* Full width */
+
+.btn--block {
+  width: 100%;
 }
