@@ -2,12 +2,16 @@
 @use '../abstracts/mixins' as m;
 
 .footer {
-  padding: t.$space-xl t.$space-sm;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: t.$space-xl;
-  border-top: 1px solid t.$color-text-secondary;
+  background-color: t.$color-background-secondary;
+  color: t.$color-text-secondary;
+  padding: t.$space-lg 0;
+    text-align: center;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__title {
     font-size: t.$fs-heading-m;
@@ -22,8 +26,7 @@
   }
 }
 
-@include m.breakpoint(tablet) {
-  .footer {
-    padding: t.$space-xl t.$space-lg;
-  }
+.footer .container {
+  text-align: center;
 }
+

@@ -3,6 +3,8 @@
 .card {
   display: flex;
   flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
 
   background-color: t.$color-background-primary;
   border-radius: 12px;
@@ -13,6 +15,7 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 10px;
 }
 
 .card__body {
@@ -27,6 +30,7 @@
   font-size: t.$fs-body-l;
   font-weight: t.$fw-bold;
   color: t.$color-text-primary;
+  text-align: center;
 }
 
 .card__text {

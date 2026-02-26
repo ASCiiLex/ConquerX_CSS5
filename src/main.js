@@ -40,35 +40,31 @@ function setActiveNavLink() {
 }
 
 function initHeaderInteractions() {
-  const toggle = document.querySelector('.nav-toggle')
-  const nav = document.querySelector('.site-nav')
-  const overlay = document.querySelector('.nav-overlay')
+  const header = document.querySelector('.header')
+  const toggle = document.querySelector('.header__toggle')
+  const nav = document.querySelector('.header__nav')
+  const overlay = document.querySelector('.header__overlay')
 
-  if (!toggle || !nav) return
+  if (!header || !toggle || !nav) return
 
   function openMenu() {
-    nav.classList.add('is-open')
-    toggle.classList.add('is-active')
+    header.classList.add('header--open')
     toggle.setAttribute('aria-expanded', true)
     document.body.classList.add('menu-open')
 
-    // Enfocar primer enlace
     const firstLink = nav.querySelector('a')
     if (firstLink) firstLink.focus()
   }
 
   function closeMenu() {
-    nav.classList.remove('is-open')
-    toggle.classList.remove('is-active')
+    header.classList.remove('header--open')
     toggle.setAttribute('aria-expanded', false)
     document.body.classList.remove('menu-open')
-
-    // Devolver foco al botón
     toggle.focus()
   }
 
   toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.contains('is-open')
+    const isOpen = header.classList.contains('header--open')
     isOpen ? closeMenu() : openMenu()
   })
 
@@ -76,9 +72,8 @@ function initHeaderInteractions() {
     overlay.addEventListener('click', closeMenu)
   }
 
-  // Cierre con ESC
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+    if (e.key === 'Escape' && header.classList.contains('header--open')) {
       closeMenu()
     }
   })

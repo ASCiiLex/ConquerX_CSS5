@@ -2,7 +2,13 @@
 
 .section {
   padding-block: t.$space-sm;
+  
 }
+
+.section p {
+  text-align: center;
+}
+
 
 @media (min-width: t.$bp-tablet) {
   .section {
