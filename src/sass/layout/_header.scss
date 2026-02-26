@@ -37,9 +37,11 @@
     margin: 0;
 
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: t.$space-lg;
     text-align: center;
+    justify-content: center;
   } 
 
   &__menu a {
@@ -74,10 +76,31 @@
     z-index: 5;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
   }
+
+  &__social {
+    margin-top: auto;
+    padding-bottom: t.$space-xl;
+    display: flex;
+    justify-content: center;
+    gap: t.$space-md;
+  } 
+
+  &__social img {
+    width: 30px;
+    height: auto;
+  }
+
 }
+
+.header__nav .social__link  img {
+  width: 30px;
+  filter: brightness(0);
+}
+
+
+
 
 /*  Menú Toggle */
 

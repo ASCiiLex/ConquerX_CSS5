@@ -1,32 +1,38 @@
 @use '../abstracts/tokens' as t;
 @use '../abstracts/mixins' as m;
 
+
 .footer {
   background-color: t.$color-background-secondary;
   color: t.$color-text-secondary;
-  padding: t.$space-lg 0;
-    text-align: center;
+  padding: t.$space-xl 0;
 
-  &__inner {
+  &__container {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
-  &__title {
-    font-size: t.$fs-heading-m;
+    &__inner {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
   }
 
   &__text {
-    max-width: 45ch;
-    margin: 0 auto;
     font-size: t.$fs-body-l;
     line-height: t.$lh-body-l;
-    color: t.$color-text-secondary;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
-.footer .container {
-  text-align: center;
+.footer .social {
+  margin-bottom: t.$space-md;
+  justify-content: center;
 }
 
+.footer .social__link img {
+  width: 22px;
+  filter: brightness(0) invert(1);
+  
+}

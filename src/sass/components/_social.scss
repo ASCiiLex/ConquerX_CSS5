@@ -3,6 +3,10 @@
 
 .social {
 
+  display: flex;
+  align-items: center;
+  gap: t.$space-lg;
+
   &__list {
     display: flex;
     gap: t.$space-md;
@@ -13,6 +17,7 @@
 
   &__link {
     display: inline-block;
+    color: t.$color-text-primary;
     transition: t.$transition-base;
   }
 
