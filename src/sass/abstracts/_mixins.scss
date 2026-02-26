@@ -7,6 +7,12 @@
     }
   }
 
+  @else if $size == tablet-h {
+    @media (min-width: t.$bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
   @else if $size == desktop {
     @media (min-width: t.$bp-desktop) {
       @content;

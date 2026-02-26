@@ -26,7 +26,7 @@
 
   &__intro {
     order: 3;
-    font-size: t.$fs-body-l;
+    font-size: t.$fs-body-m;
     line-height: t.$lh-body-l;
     color: t.$color-text-primary;
     padding-bottom: t.$space-sm;
@@ -45,7 +45,7 @@
   }
 
   &__more {
-    font-size: t.$fs-body-l;
+    font-size: t.$fs-body-m;
     font-weight: t.$fw-medium;
     text-decoration: none;
     color: t.$color-primary;
@@ -70,9 +70,15 @@
   .content {
     padding-block: t.$space-lg;
 
+    &__inner {
+      width: 100%;
+      max-width: 960px;
+      margin-inline: auto;
+    }
+
     &__intro {
       order: 2;
-      font-size: t.$fs-body-2xl;
+      font-size: t.$fs-body-xl;
       line-height: t.$lh-body-xl;
     }
 
@@ -86,5 +92,50 @@
 }
 
 
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+  .content {
+  
+    &__list {
+      width: 100%;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 420px));
+        justify-content: center;
+        gap: t.$space-xl;
+        
+    }
+
+    
+  }
+}
+
 
 /* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+
+  .content {
+
+       
+    &__intro {
+      font-size: t.$fs-body-l;
+    }
+
+    &__list {
+      width: 100%;
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 560px));
+      justify-content: center;
+      gap: t.$space-xl;
+    }
+
+    &__footer {
+      width: 100%;
+    }
+  }
+
+}

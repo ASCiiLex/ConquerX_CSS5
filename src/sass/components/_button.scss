@@ -47,7 +47,7 @@
 
 /* Full width */
 
-.btn--block {
+.btn--block { 
   width: 100%;
 }
 
@@ -57,14 +57,11 @@
 @include m.breakpoint(tablet) {
 
   .btn--primary {
-    font-size: t.$fs-body-xl;
+    font-size: t.$fs-body-l;
 
   }
 
 }
-
-
-
 
 
 /* ================= DESKTOP ================= */

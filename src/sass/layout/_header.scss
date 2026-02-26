@@ -147,8 +147,6 @@
 
 /* ================= TABLET ================= */
 
-
-
 @include m.breakpoint(tablet) {
   .header {
     padding: t.$space-sm 0;
@@ -164,3 +162,29 @@
 
 
 /* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__nav {
+    position: static;
+    right: auto;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    display: block;
+  }
+
+  .header__menu {
+    flex-direction: row;
+    gap: t.$space-lg;
+  }
+
+  .header__social {
+    display: none;
+  }
+
+}

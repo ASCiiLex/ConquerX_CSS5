@@ -4,6 +4,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  height: 100%   ;
   max-width: 90%;
   margin: 0 auto;
 
@@ -13,8 +14,6 @@
 }
 
 .card__media {
-  width: 100%;
-  height: auto;
   display: block;
   border-radius: 10px;
 }
@@ -28,14 +27,14 @@
 }
 
 .card__title {
-  font-size: t.$fs-body-l;
+  font-size: t.$fs-body-m;
   font-weight: t.$fw-bold;
   color: t.$color-text-primary;
   text-align: center;
 }
 
 .card__text {
-  font-size: t.$fs-body-l;
+  font-size: t.$fs-body-m;
   line-height: t.$lh-body-l;
   color: t.$color-text-primary;
 }
@@ -46,24 +45,62 @@
 @include m.breakpoint(tablet) {
 
   .card {
+    max-width: 80%;
     border: 1px solid t.$color-background-button;
     box-shadow: 0 8px 24px t.$color-background-secondary;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-width: 562px;
-    max-width: 562px;
+   
 
     &__title {
-      font-size: t.$fs-body-xl;
+      font-size: t.$fs-body-l;
     }
 
     &__text {
-      font-size: t.$fs-body-xl;
-    }    
+      font-size: t.$fs-body-l;
+    }
 
   }
 
 }
 
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+  .card {
+  
+    &__body {
+      margin-top: auto;
+        
+    }
+
+    
+  }
+}
 
 
 /* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+  
+  .card {
+    max-width: 100%;
+    margin: 0; 
+    align-items: center;
+
+    &__body {
+      margin-top: auto;
+    }
+
+    &__title {
+      font-size: t.$fs-body-l;
+    }
+
+    &__text {
+      font-size: t.$fs-body-m;
+    }
+    
+  }
+
+}
+
