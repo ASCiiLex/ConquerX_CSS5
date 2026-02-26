@@ -151,7 +151,7 @@
 
 @include m.breakpoint(tablet) {
   .header {
-    padding: t.$space-lg 0;
+    padding: t.$space-sm 0;
 
     &__container {
       flex-direction: row;
