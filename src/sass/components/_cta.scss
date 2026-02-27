@@ -54,3 +54,26 @@
 
 
 /* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+
+  .cta {
+
+    &__content {
+      max-width: 720px;
+      margin-inline: auto;
+    }
+
+    &__title {
+      line-height: t.$lh-heading-l;
+    }
+
+
+    &__text {
+      line-height: t.$lh-body-l;
+    }
+
+  }
+
+  
+}

@@ -120,7 +120,7 @@
 @include m.breakpoint(desktop) {
 
   .content {
-    padding-top: 0;
+    padding-top: t.$space-md;
     margin-bottom: t.$space-xl;
     
        
