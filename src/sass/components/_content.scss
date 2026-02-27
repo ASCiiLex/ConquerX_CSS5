@@ -35,7 +35,6 @@
   &__list {
     display: grid;
     order: 2;
-    flex-direction: column;
     gap: t.$space-lg;
     justify-content: center;
   }
@@ -121,7 +120,9 @@
 @include m.breakpoint(desktop) {
 
   .content {
-
+    padding-top: 0;
+    margin-bottom: t.$space-xl;
+    
        
     &__intro {
       font-size: t.$fs-body-l;

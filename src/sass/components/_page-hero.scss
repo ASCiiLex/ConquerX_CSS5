@@ -41,7 +41,10 @@
     
     &__extra {
       display: inline-block;
+    }
 
+    &__text {
+      line-height: t.$lh-heading-l;
     }
   
   
@@ -54,14 +57,62 @@
 
 @include m.breakpoint(tablet-h) {
 
- 
+  .page-hero {
+  
+    &__inner {
+      max-width: 1000px;
+    }
+
+    &__text {
+      font-size: t.$fs-body-ml;
+      max-width: 900px;
+    }
+  }
+
 }
 
 
 /* ================= DESKTOP ================= */
 
 @include m.breakpoint(desktop) {
+  
+  .page-hero {
+    max-width: 1100px;
+    padding-top: t.$space-lg;
 
+    &__inner {
+      max-width: 1000px;
+    }
 
+    &__text {
+      font-size: t.$fs-body-ml;
+      max-width: 900px;
+    }
+
+  }
+  
+}
+
+/* ================= DESKTOP XL ================= */
+
+@include m.breakpoint(desktop-xl) {
+  
+  .page-hero {
+    max-width: 1400px;
+
+    &__title {
+      font-size: t.$fs-heading-l;
+    }
+
+    &__inner {
+      max-width: 1300px;
+    }
+
+    &__text {
+      font-size: t.$fs-body-l;
+      max-width: 1000px;
+    }
+
+  }
   
 }
