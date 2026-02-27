@@ -1,0 +1,67 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+
+.page-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: t.$space-md;
+
+
+  &__title {
+    font-size: t.$fs-heading-m;
+    font-weight: t.$fw-bold;
+    line-height: t.$lh-heading-l;
+    margin-bottom: t.$space-md;
+  }
+
+  &__text {
+    font-size: t.$fs-body-l;
+    line-height: t.$lh-heading-m;
+    max-width: 700px;
+    margin-inline: auto;
+  }
+
+  &__extra {
+    display: none;
+
+  }
+
+}
+
+
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+
+  .page-hero {
+    
+    &__extra {
+      display: inline-block;
+
+    }
+  
+  
+  }
+
+}
+
+
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+ 
+}
+
+
+/* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+
+
+  
+}

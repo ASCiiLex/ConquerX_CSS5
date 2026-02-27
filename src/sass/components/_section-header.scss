@@ -1,0 +1,40 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+
+.section-header {
+  text-align: center;
+  width: 100%;
+
+  &__title {
+    font-size: t.$fs-heading-m;
+    font-weight: t.$fw-bold;
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+
+
+}
+
+
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+ 
+}
+
+
+/* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+
+
+  
+}

@@ -1,0 +1,21 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+
+.card-list {
+  display: grid;
+  gap: t.$space-md;
+  margin-top: t.$space-md;
+}
+
+
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(280px, 350px));
+    justify-content: center;
+  }
+}

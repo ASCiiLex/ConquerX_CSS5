@@ -5,38 +5,44 @@
   display: flex;
   flex-direction: column;
   height: 100%   ;
-  max-width: 90%;
-  margin: 0 auto;
+  
 
   background-color: t.$color-background-primary;
   border-radius: 12px;
   overflow: hidden;
-}
 
-.card__media {
-  display: block;
-  border-radius: 10px;
-}
+  
+  &__media {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
 
-.card__body {
-  display: flex;
-  flex-direction: column;
-  gap: t.$space-sm;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: t.$space-sm;
 
-  padding: t.$space-md;
-}
+    padding: t.$space-md;
+  }
 
-.card__title {
-  font-size: t.$fs-body-m;
-  font-weight: t.$fw-bold;
-  color: t.$color-text-primary;
-  text-align: center;
-}
+  &__title {
+    font-size: t.$fs-heading-s;
+    font-weight: t.$fw-bold;
+    color: t.$color-text-primary;
+    text-align: center;
+  }
 
-.card__text {
-  font-size: t.$fs-body-m;
-  line-height: t.$lh-body-l;
-  color: t.$color-text-primary;
+  &__text {
+    font-size: t.$fs-body-m;
+    line-height: t.$lh-body-l;
+    color: t.$color-text-primary;
+  }
+
+  &__extra {
+    display: none;
+  }
+
 }
 
 
@@ -45,21 +51,25 @@
 @include m.breakpoint(tablet) {
 
   .card {
-    max-width: 80%;
     border: 1px solid t.$color-background-button;
     box-shadow: 0 8px 24px t.$color-background-secondary;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
    
     &__body {
-      margin-top: auto;
-        
+      margin-top: auto;  
     }
+
+
     &__title {
       font-size: t.$fs-body-l;
     }
 
     &__text {
       font-size: t.$fs-body-l;
+    }
+
+    &__extra {
+      display: none;
     }
 
   }
