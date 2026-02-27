@@ -100,8 +100,6 @@
 }
 
 
-
-
 /*  Menú Toggle */
 
 .header__toggle span {
@@ -179,12 +177,44 @@
   }
 
   .header__menu {
+    
     flex-direction: row;
     gap: t.$space-lg;
+
+  }
+
+  .header__menu a {
+    font-size: t.$fs-body-m;
+    display: inline-block;
+    transition: transform .25s ease, color .25s ease;
+    gap: t.$space-lg;
+
+    &:hover {
+      transform: translateY(-2px);
+      color: t.$color-primary;
+      filter: brightness(0.95);
+    }
   }
 
   .header__social {
     display: none;
+  }
+
+}
+
+/* ================= DESKTOP XL ================= */
+
+@include m.breakpoint(desktop-xl) {
+
+  .header__menu a {
+    font-size: t.$fs-body-l;
+    display: inline-block;
+    transition: transform .25s ease, color .25s ease;
+    gap: t.$space-lg;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 
 }

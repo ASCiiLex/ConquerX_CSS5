@@ -50,7 +50,10 @@
     box-shadow: 0 8px 24px t.$color-background-secondary;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
    
-
+    &__body {
+      margin-top: auto;
+        
+    }
     &__title {
       font-size: t.$fs-body-l;
     }
@@ -67,15 +70,7 @@
 
 @include m.breakpoint(tablet-h) {
 
-  .card {
-  
-    &__body {
-      margin-top: auto;
-        
-    }
-
-    
-  }
+ 
 }
 
 
@@ -88,10 +83,7 @@
     margin: 0; 
     align-items: center;
 
-    &__body {
-      margin-top: auto;
-    }
-
+    
     &__title {
       font-size: t.$fs-body-l;
     }

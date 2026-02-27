@@ -33,10 +33,11 @@
   }
 
   &__list {
-    display: flex;
+    display: grid;
     order: 2;
     flex-direction: column;
     gap: t.$space-lg;
+    justify-content: center;
   }
 
   &__footer {
@@ -84,7 +85,9 @@
 
     &__list {
       order: 3;
+      grid-template-columns: repeat(2, minmax(280px, 450px));
       gap: t.$space-xl;
+      justify-content: center;
       padding-bottom: t.$space-xl;
     }
   }
@@ -100,11 +103,11 @@
   
     &__list {
       width: 100%;
-        align-items: center;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 420px));
-        justify-content: center;
-        gap: t.$space-xl;
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 420px));
+      justify-content: center;
+      gap: t.$space-xl;
         
     }
 
@@ -128,7 +131,7 @@
       width: 100%;
       align-items: center;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 560px));
+      grid-template-columns: repeat(2, minmax(0, 380px));
       justify-content: center;
       gap: t.$space-xl;
     }
@@ -136,6 +139,24 @@
     &__footer {
       width: 100%;
     }
+  }
+
+}
+
+/* ================= DESKTOP XL ================= */
+
+@include m.breakpoint(desktop-xl) {
+
+  .content {
+    &__intro {
+      font-size: t.$fs-body-l;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, minmax(0, 560px));
+      gap: t.$space-xl;
+    }
+
   }
 
 }
