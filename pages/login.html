@@ -23,28 +23,38 @@
   <div data-header></div>
   
   <main>
+    
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <h1 class="page-hero__title">Iniciar sesión</h1>
+        <p class="page-hero__text">Para poder acceder a todo el contenido de la academia, has de iniciar sesión</p>
+      </div>
+    </section>
 
-    <h1>Iniciar sesión</h1>
-    <p>Para poder acceder a todo el contenido de la academia, has de iniciar sesión</p>
-    <form action="post" enctype="multipart/form-data">
+    <section class="section content">
+      <div class="container content__inner">
+        <form class="form" action="post" enctype="multipart/form-data">
   
-      <p>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" name="email" id="email" required>
+          </div>
 
-      <p>
-        <label for="pass">Contraseña</label>
-        <input type="password" name="pass" id="pass" required>
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="pass">Contraseña</label>
+            <input class="form__input" type="password" name="pass" id="pass" required>
+          </div>
 
 
-      <p>
-        <button>Enviar</button>
-        <input type="reset" value="Borrar formulario">
-      </p>
+          <div class="form__actions">
+            <button class="btn btn--secondary">Enviar</button>
+            <input type="reset" value="Borrar" class="btn btn--ghost">
+          </div>
 
-    </form>
+        </form>
+
+      </div>
+    </section>
 
   </main>
 

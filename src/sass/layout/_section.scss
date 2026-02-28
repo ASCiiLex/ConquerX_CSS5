@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+.section-map {
+  padding: 0;
+}
+
 
 /* ================= TABLET ================= */
 
@@ -24,6 +28,7 @@
 /* ================= DESKTOP ================= */
 
 @include m.breakpoint(desktop) {
-
+  
+  
   
 }

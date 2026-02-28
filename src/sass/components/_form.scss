@@ -1,53 +1,65 @@
 @use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
 
-.form-group {
-  position: relative;
-  margin-bottom: t.$space-lg;
-  text-align: left;
+
+.form {
+  margin-bottom: t.$space-xl;
+
+  &__field {
+    position: relative;
+    margin-bottom: t.$space-lg;
+  }
+
+  &__label {
+    display: block;
+    font-size: t.$fs-body-m;
+    font-weight: t.$fw-medium;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid t.$color-text-primary;
+    font-size: t.$fs-body-m;
+    line-height: t.$lh-body-l;
+    color: t.$color-text-primary;
+    outline: none;
+    transition: border-color t.$transition-base;
+  }
+
+  &__input:focus,
+  &__textarea:focus {
+    border-bottom: 1px solid t.$color-primary;
+  }
+
+  /* Validation */
+
+  &__input:invalid:not(:placeholder-shown),
+  &__textarea:invalid:not(:placeholder-shown) {
+    border-bottom: 1px solid t.$color-error;
+  }
+
+  &__error {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    font-size: 12px;
+    color: t.$color-error;
+  }
+
+  &__input:invalid:not(:placeholder-shown) + .form__error,
+  &__textarea:invalid:not(:placeholder-shown) + .form__error {
+    display: block;
+  }
+
+  &__actions {
+    margin-top: t.$space-lg;
+    display: flex;
+    gap: t.$space-md;
+    justify-content: center;
+  }
+
 }
-
-input,
-textarea {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid t.$color-text-secondary;
-  padding: t.$space-sm 0;
-  color: t.$color-text-primary;
-  font-size: t.$fs-body-m;
-  line-height: t.$lh-body-l;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  outline: none;
-}
-
-/* Focus state */
-input:focus,
-textarea:focus {
-  border-bottom: 1px solid t.$color-primary;
-}
-
-/* ---------- VALIDATION STATES ---------- */
-
-/* Solo mostrar error cuando el usuario ha escrito algo */
-input:not(:placeholder-shown):invalid,
-textarea:not(:placeholder-shown):invalid {
-  border-bottom: 1px solid t.$color-error;
-}
-
-/* Mostrar mensaje de error */
-input:not(:placeholder-shown):invalid + .form-error,
-textarea:not(:placeholder-shown):invalid + .form-error {
-  display: block;
-}
-
-/* Mensaje */
-.form-error {
-  display: none;
-  position: absolute;
-  right: 0;
-  bottom: -18px;
-  font-size: 12px;
-  color: t.$color-error;
-}
-

@@ -24,50 +24,61 @@
   
   <main>
 
-    <h1>Regístrate</h1>
-    <p>Para poder acceder a todo el contenido de la academia, has de estar registrado</p>
-    <form action="post" enctype="multipart/form-data">
-      <p>
-        <label for="name">Nombre completo</label>
-        <input type="text" name="name" id="name">
-      </p>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <h1 class="page-hero__title">Regístrate</h1>
+        <p class="page-hero__text">Para poder acceder a todo el contenido de la academia, has de estar registrado</p>
+      </div>
+    </section>
+    
+    <section class="section content">
+      <div class="container content__inner">
+    
+        <form class="form" action="post" enctype="multipart/form-data">
+          <div class="form__field">
+            <label class="form__label" for="name">Nombre completo</label>
+            <input class="form__input" type="text" name="name" id="name">
+          </div>
 
-      <p>
-        <label for="birthday">Fecha de nacimiento</label>
-        <input type="date" name="birthday" id="birthday">
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="birthday">Fecha de nacimiento</label>
+            <input class="form__input" type="date" name="birthday" id="birthday">
+          </div>
 
-      <p>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" name="email" id="email" required>
+          </div>
 
-      <p>
-        <label for="address">Dirección</label>
-        <input type="text" name="address" id="address">
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="address">Dirección</label>
+            <input class="form__input" type="text" name="address" id="address">
+          </div>
 
-      <p>
-        <label for="web">Página web</label>
-        <input type="url" name="web" id="web">
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="web">Página web</label>
+            <input class="form__input" type="url" name="web" id="web">
+          </div>
 
-      <p>
-        <label for="photo">Foto</label>
-        <input type="file" name="photo" id="photo">
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="photo">Foto</label>
+            <input  class="form__input"type="file" name="photo" id="photo">
+          </div>
 
-      <p>
-        <label for="bio">Biografía</label><br>
-        <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
-      </p>
+          <div class="form__field">
+            <label class="form__label" for="bio">Biografía</label><br>
+            <textarea class="form__textarea" name="bio" id="bio" cols="30" rows="5"></textarea>
+          </div>
 
-      <p>
-        <button>Enviar</button>
-        <input type="reset" value="Borrar formulario">
-      </p>
+          <div class="form__actions">
+            <button class="btn btn--secondary">Enviar</button>
+            <input type="reset" value="Borrar" class="btn btn--ghost">
+          </div>
 
-    </form>
+        </form>
+
+      </div>
+    </section>
 
   </main>
   
