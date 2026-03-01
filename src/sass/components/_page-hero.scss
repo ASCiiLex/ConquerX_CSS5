@@ -16,6 +16,10 @@
     margin-bottom: t.$space-md;
   }
 
+  &__subtitle {
+    display: none;
+  }
+
   &__text {
     font-size: t.$fs-body-l;
     line-height: t.$lh-heading-m;
@@ -28,6 +32,10 @@
 
   }
 
+  &__media{
+    max-width: 100%;
+  }
+
 }
 
 
@@ -38,6 +46,10 @@
 @include m.breakpoint(tablet) {
 
   .page-hero {
+
+    &__subtitle {
+    display: inline;
+  }
     
     &__extra {
       display: inline-block;
