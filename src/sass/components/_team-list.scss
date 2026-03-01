@@ -1,0 +1,37 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.team-list {
+  display: grid;
+  gap: t.$space-xl;
+  order: 2;
+  align-items: start;
+}
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+
+  .team-list {
+    gap: t.$space-xl;
+    
+}
+}
+
+
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+    .team-list {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        column-gap: t.$space-lg;
+        row-gap: t.$space-xl;
+    }
+ 
+}
+
+
+/* ================= DESKTOP ================= */

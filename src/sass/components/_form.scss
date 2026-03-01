@@ -63,3 +63,10 @@
   }
 
 }
+
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+  .form {
+  }
+}

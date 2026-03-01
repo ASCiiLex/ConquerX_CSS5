@@ -17,7 +17,7 @@
 
   &__title {
     font-size: t.$fs-heading-m;
-    line-height: t.$lh-heading-m;
+    line-height: t.$lh-heading-l;
     font-weight: t.$fw-bold;
     color: t.$color-text-primary;
     padding-bottom: t.$space-sm;
@@ -149,6 +149,11 @@
 @include m.breakpoint(desktop-xl) {
 
   .content {
+
+    &__inner {
+      max-width: 1240px;
+    }
+
     &__intro {
       font-size: t.$fs-body-l;
     }

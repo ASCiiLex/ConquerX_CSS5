@@ -1,0 +1,113 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+
+.team-card {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    &__media {
+        width: 180px;
+        aspect-ratio: 1 /1;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__name {
+        font-weight: t.$fw-bold;
+        font-size: t.$fs-body-l;
+        text-align: center;
+    }
+    
+    &__role {
+        font-size: t.$fs-body-m;
+        opacity: .7;
+        text-align: center;
+    }
+
+    &__bio {
+        text-align: center;
+        padding-top: t.$space-xs;
+        min-height: 170px;
+    }
+
+}
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+  
+    .team-card {
+      border: 1px solid t.$color-background-button;
+      border-radius: 16px;
+      padding: t.$space-lg;
+      box-shadow: 0 8px 24px t.$color-background-secondary;
+      min-height: 550px;
+      max-width: 320px;
+    }
+}
+
+
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+    .team-card {
+      min-height: 600px;
+      max-width: 320px;
+    }
+ 
+}
+
+/* ================= DESKTOP XL ================= */
+
+@include m.breakpoint(dsktop-xl) {
+
+    .team-card {
+        max-height: 530px;
+
+        &__media {
+            width: 200px;
+        }
+    }
+}/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+    .team-card {
+      min-height: 600px;
+      max-width: 320px;
+    }
+ 
+}
+
+/* ================= DESKTOP XL ================= */
+
+@include m.breakpoint(desktop-xl) {
+
+    .team-card {
+        min-height: 550px;
+
+        &__media {
+            width: 200px;
+        }
+    }
+}
