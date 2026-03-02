@@ -60,48 +60,47 @@
     background-position: center;
     background-repeat: no-repeat;
 
-  }
-
-
-  .hero__inner {
-    flex-direction: column;
-    align-items: center;
-    gap: t.$space-md;
-    display: flex;
-    text-align: center;
-  }
-
-  .hero__content {
-    flex: unset;
-    max-width: 720px;
-  }
-
-  .hero__media {
-    display: none;
-  }
-
-  .hero__media img {
-    max-width: 100%;
-    margin-inline: 0;
-  }
-
-  .hero__title {
-    font-size: t.$fs-heading-l;
-    font-weight: t.$fw-medium;
-  }
   
-  .hero__text {
-    display: block;
-    font-size: t.$fs-body-l;
-  }
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      gap: t.$space-md;
+      display: flex;
+      text-align: center;
+    }
 
-  .hero__extra {
-    display: inline;
-  }
+    &__content {
+      flex: unset;
+      max-width: 720px;
+    }
 
-  .hero__brand {
-    display: inline;    
-    font-size: t.$fs-heading-l;
+    &__media {
+      display: none;
+    }
+
+    &__media img {
+      max-width: 100%;
+      margin-inline: 0;
+    }
+
+    &__title {
+      font-size: t.$fs-heading-l;
+      font-weight: t.$fw-medium;
+    }
+    
+    &__text {
+      display: block;
+      font-size: t.$fs-body-l;
+    }
+
+    &__extra {
+      display: inline;
+    }
+
+    &__brand {
+      display: inline;    
+      font-size: t.$fs-heading-l;
+    }
   }
 }
 

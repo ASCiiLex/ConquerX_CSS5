@@ -1,0 +1,146 @@
+@use '../abstracts/tokens' as t;
+@use '../abstracts/mixins' as m;
+
+.blog {
+  padding-inline: t.$space-md;
+  padding-block: t.$space-xl;
+  
+
+    &__inner {
+        max-width: 760px;
+        margin-inline: auto;
+    }
+
+    &__content {
+        font-size: t.$fs-body-m;
+        line-height: t.$lh-body-l;
+        color: t.$color-text-primary;
+
+
+        h2 {
+        margin-top: t.$space-xl;
+        margin-bottom: t.$space-md;
+        font-size: t.$fs-heading-s;
+        font-weight: t.$fw-bold;
+        line-height: t.$lh-heading-m;
+        }
+
+        h3 {
+        margin-top: t.$space-lg;
+        margin-bottom: t.$space-sm;
+        font-size: t.$fs-body-l;
+        font-weight: t.$fw-bold;
+        line-height: t.$lh-heading-m;
+        }
+
+        p {
+        margin-bottom: t.$space-md;
+        text-align: justify;
+        hyphens: auto;
+        }
+
+        strong {
+        font-weight: t.$fw-bold;
+        }
+
+        ul,
+        ol {
+        margin-top: t.$space-md;
+        margin-bottom: t.$space-lg;
+        padding-left: t.$space-lg;
+        }
+
+        li {
+        margin-bottom: t.$space-xs;
+        }
+
+        img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-block: t.$space-xl;
+        border-radius: 8px;
+        }
+
+        pre {
+        background: t.$color-background-secondary;
+        color: t.$color-text-secondary;
+        padding: t.$space-md;
+        border-radius: 8px;
+        margin-block: t.$space-lg;
+
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+
+        }
+
+        code {
+        font-family: monospace;
+        font-size: t.$fs-body-m;
+        line-height: t.$lh-body-l;
+        display: block;
+        }
+
+
+    }
+
+    &__cta {
+        margin-top: t.$space-xl;
+        display: flex;
+        flex-direction: column;
+        gap: t.$space-sm;
+    }
+
+}
+
+
+/* ================= TABLET ================= */
+
+@include m.breakpoint(tablet) {
+
+
+}
+
+
+/* ================= TABLET HORIZONTAL ================= */
+
+@include m.breakpoint(tablet-h) {
+
+    .blog {
+
+        &__cta {
+            margin-top: t.$space-xl;
+            display: flex;
+            flex-direction: column;
+            gap: t.$space-sm;
+        }
+    }
+}
+
+
+/* ================= DESKTOP ================= */
+
+@include m.breakpoint(desktop) {
+  
+    .blog {
+
+        &__inner {
+            max-width: 820px;
+        }
+
+    }
+}
+
+/* ================= DESKTOP XL ================= */
+
+@include m.breakpoint(desktop-xl) {
+
+    .blog {
+
+        &__inner {
+            max-width: 1200px;
+        }
+
+    }
+}
+  
