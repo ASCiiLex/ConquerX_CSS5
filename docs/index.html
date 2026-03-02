@@ -5,98 +5,142 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Academia Conquer Blocks | Aprende todo lo necesario para el Desarrollo FullStack</title>
-  <link rel="stylesheet" href="css/style.css">
+
   <meta name="description" content="Aprende todo lo necesario en FullStack y Blockchain Developer">
 
-  <link rel="icon" href="/ConquerX_CSS5/assets/favicon-tl4dpFnO.ico" sizes="any">
-  <link rel="icon" href="/ConquerX_CSS5/assets/icon-CrLf0eJB.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/ConquerX_CSS5/assets/icon-ijzhoTP6.png">
+  <link rel="icon" href="/ConquerX_CSS5/icono.png" type="image/png">
+  
 
   <link rel="manifest" href="/ConquerX_CSS5/assets/site-BxrbV1h7.webmanifest">
   <meta name="theme-color" content="#fafafa">
 
-  <script type="module" crossorigin src="/ConquerX_CSS5/assets/main-C40_gurV.js"></script>
-  <link rel="stylesheet" crossorigin href="/ConquerX_CSS5/assets/main-BLYPODWt.css">
+  <script type="module" crossorigin src="/ConquerX_CSS5/assets/main-Bf0yT03f.js"></script>
+  <link rel="stylesheet" crossorigin href="/ConquerX_CSS5/assets/main-DlQ2eWIA.css">
 </head>
 
 <body>
-  <header>
-    <figure>
-      <img width="250px"  src="data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAZhtZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAANGlsb2MAAAAAREAAAgACAAAAAAG8AAEAAAAAAAAC9gABAAAAAASyAAEAAAAAAAACOAAAADhpaW5mAAAAAAACAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAFWluZmUCAAAAAAIAAGF2MDEAAAAA12lwcnAAAACxaXBjbwAAABNjb2xybmNseAACAAIABoAAAAAMYXYxQ4EAHAAAAAAUaXNwZQAAAAAAAAE3AAAAIQAAAA5waXhpAAAAAAEIAAAAOGF1eEMAAAAAdXJuOm1wZWc6bXBlZ0I6Y2ljcDpzeXN0ZW1zOmF1eGlsaWFyeTphbHBoYQAAAAAMYXYxQ4EgAgAAAAAUaXNwZQAAAAAAAAE3AAAAIQAAABBwaXhpAAAAAAMICAgAAAAeaXBtYQAAAAAAAAACAAEEgYYHiAACBIIDhIUAAAAaaXJlZgAAAAAAAAAOYXV4bAACAAEAAQAABTZtZGF0EgAKBhghZtAwqDLpBUUABpoo0oEYBohpJ2YhagKKe93tQSX2LvqWnKO2bCnAI+9Ysv6Dh8Frn6zGCTeI+dymCX96yeon0Lg+c6HEHb7Wkk8vSKJrlwoC+fPW+TuolaWV9D1duAEh5TiYM9N7PPQT6lDQk5KG5ivnow8Zs5mHNAkNvbHONzUV2HGC8P5LupwbFYjCifuT2Au7uG+w9Lno7i1JitECwkN5BgDvUKe4SCDNgjB/fMeSt0UtWVsP9GJTnBm5ubfr6JWXQt6Xw51ZEQIM/wjAgDK60HSv30KkaXhlvLxirr4rjxzdk37nB2G19t2GJ4ew1fj3F7chNMaRe+axZMl4kglMqNjA2Gb3PCCxiv3T5Fl1nNG8ME2J7GQhR+bffnaZRBVc8zgHuDcMHtTFKchzfmOyalzo4gAVncExmQRvZxt6rIN2/2reNFC6L1QQu+5YpYISVBoYCE2WCep7Sg/uj6aelxU7GBXuVa3Z2XEX9oGg7bN+aHNpsbH9l0DkSOaQoxeUiwucO41yvd5BH0JW6UBPExSuwQLrYFGYDYyEdY5EKUo/ytNnvAl2CHBo9fYPhth6rSDAVl/qZKB3Qsj0SsdGI8NFUChaAaSxb0h9vOff03zll0Xx8C0sd8InoL4JEfv96cj25MmTbz0qZqC1P9fm9cUQ7wIgx8bzG1vnetdUgGZzjVSJUZodkNEZZrKAtdjWhschATHC9JaSrX7Kp37/4aQKA/rCp3yYpaPi9uwIDTz/dzXPMAgswsKoRNvRoVrKYrLi7Id84gYtpYDE4FSvK65k8XIRpYBUWc4b8pONSrZKpTpfdgbX30qKtmtM/mwHLy059PhE7sYCA3cVmfds5+0TyVgceL5WLLOe0zcRX7npLfAGUFM0C99R1hhJm7Qcq8PTeOYbHVSuSWwCCEAk2SyLQGHFdNZol0DGoidPyxcEBvGtH3NfomheUBbHNRwMGAOHdwv0dstcUTH9bwvaCs+wlL+SQGIEktDgk3ISAAoGOCFm0DBIMqsEFAAFlnligAHFeGX7htCZl3XOaVDA2wERfI7iweN9GZsCEXfXPzfBUexljd7EYgL2BFQcYKdPYY+f55SvFOk2EmnSVUNN62oXW7aeioK9Jlzhf8Uu2Wl+NKlrV8aJ8mFCvEufQ2laCK9yVfOu6V3AuIUNxEOc1fJ1KGXWDdgAZJk7LP8F9s+/UGp2suzfxgTIk4pwQcsq+Vjbk0fPvtgeQVOKQ0pk5IjMsGURH2OdQRjgAJ370l9++mA55KbUdEu+yRjrzxDURVR8aB7WZ2z6I3u+kwQsnAeshfUUsxVulv7HV30emq0HBYibo3rt2AXkPxR0rVVtvRuMBzuR+T17GekomomPMagqKleKy7FOKjm9ZzZyaLeu2uREaDMvxIZ+m7cvP3UA45thEu7lHjrZcYuPR7AGYVwqxWCCaA2MQIeVTOEF4oFPLdJXh0B2AIrTtmsYUIYcw+3PIs8Ps/o7NbYpIBTuIVH8v4ebQUZPytcUTxjssQXoB4omkYaB8KBlg5FfghhpH9JohJ3hbTZouPaIcnT+AawxsOyCx/8b/NMnomJosAkEV0p+hwLIHJmmL2qSxFhTUDXJPQth+iJ1X14sBEL44Htuf0c0NUsFY4XsUyZQ0kbl+FccBfyU1viBxPyTnfDC5hoHAhfLqgcVYvQJFTn3Fo1xQqeW6Vgc7FcjNxPIcvtwmcFZdesfbqyn/UOcjxb7t46D+CyNVdgKm/WLp1Yd8fBfPB8Q" alt="Logotipo de Conquer Blocks">
-    </figure>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li><a href="/pages/quienes-somos.html">Quienes somos</a></li>
-        <li><a href="/pages/cursos.html">Cursos</a></li>
-        <li><a href="/pages/blog.html">Blog</a></li>
-        <li><a href="/pages/registro.html">Registro</a></li>
-        <li><a href="/pages/login.html">Login</a></li>
-        <li><a href="/pages/contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div data-header></div>
   
   <main>
-    <section>  <!--Bienvenida-->
-    <h1>Bienvenido a la academia de Conquer Blocks</h1>
-    <p>Donde podras descubrir y aprender todo lo que necesitas para el Desarrollo FullStack y Blockchain.</p>
-    <figure>
-      <img width="250px"  src="/ConquerX_CSS5/assets/Fullstack-9NN6lQv_.avif" alt="Fullstack Developer">
-    </figure>
+    <section class="section hero">  <!--Bienvenida-->
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Bienvenido a <span class="hero__extra">la academia de</span><span class="hero__brand"> Conquer Blocks</span>
+          </h1>
+          <p class="hero__text">
+            Donde podras descubrir y aprender todo lo que necesitas para el Desarrollo FullStack y Blockchain.
+          </p>
+        </div>
+        <div class="hero__media">
+          <img width="250px"  src="/ConquerX_CSS5/assets/Fullstack-9NN6lQv_.avif" alt="Fullstack Developer">
+        </div>
+
+      </div>
     </section>
 
-    <section> <!--CTA-->
-    <h2>Descubre quienes somos Conquer Blocks</h2>
-    <p>Con nosotros podrás formar parte del mundo del Desarrollo FullStack y Blockchain.</p>
-    <p><a href="/pages/quienes-somos.html">Quienes somos Conquer Blocks</a></p>
+    <section class="section cta"> <!--CTA-->
+      <div class="container cta__inner">
+        <h2 class="cta__title">
+          Descubre quienes somos Conquer Blocks
+        </h2>
+        <p class="cta__text">
+          Con nosotros podrás formar parte del mundo del Desarrollo FullStack y Blockchain.
+        </p>
+        <p>
+          <a class="btn btn--primary btn--block" href="/pages/quienes-somos.html">
+            Quienes somos Conquer Blocks
+          </a>
+        </p>
+      </div>
     </section>
     
-    <section> <!--Cursos-->
-    <h2>Últimos cursos</h2>
-    <p>Descubre lo último de nuestra plataforma en nuestros cursos actualizados.</p>
+    <section class="section content content--cursos"> <!--Cursos-->
+      <div class="container content__inner">
 
-    <article>
-      <h3>Curso Desarrollo FullStack</h3>
-      <p>Aprende todos los fundamentos de la web</p>
-        <p><a href="/pages/cursos/cursos1.html">Ver curso</a></p>
-    </article>
+        <header class="content__header">
+          <h2 class="content__title">Últimos cursos</h2>
+        </header>
+        <p class="content__intro">
+            Descubre lo último de nuestra plataforma en nuestros cursos actualizados.
+        </p>
 
-    <article>
-      <h3>Curso Desarrollo Blockchain</h3>
-      <p>Aprende todos los fundamentos de la Blockchain</p>
-        <p><a href="/pages/cursos/cursos2.html">Ver curso</a></p>
-    </article>
-    
-    <p>Si quieres ver todos nuestros cursos haz <a href="/pages/cursos.html">click aquí</a></p>
+        <div class="content__list card-list">
 
+          <article class="card">
+            <img class="card__media" src="/ConquerX_CSS5/assets/FullStack-nxVgP1ye.avif" alt="Curso Desarrollo FullStack">
+            <div class="card__body">
+              <h3 class="card__title">Curso Desarrollo FullStack</h3>
+              <p class="card__text">Aprende todos los fundamentos de la web.</p>
+              <a class="btn btn--secondary card__cta" href="/pages/cursos/cursos1.html">Ver curso</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="/ConquerX_CSS5/assets/Blockchain-CIlce0u4.avif" alt="Curso Desarrollo Blockchain">
+            <div class="card__body">
+              <h3 class="card__title">Curso Desarrollo Blockchain</h3>
+              <p class="card__text">Aprende todos los fundamentos de la Blockchain.</p>
+              <a class="btn btn--secondary card__cta" href="/pages/cursos/cursos2.html">Ver curso</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="content__footer">
+          <a href="/pages/cursos.html" class="btn btn--primary btn--block">
+            Ver todos los cursos
+          </a>
+        </div>
+
+      </div>
     </section>
 
-    <section> <!--Blog-->
-    <h2>Últimas noticias</h2>
-    <p>Descubre lo último en FullStack y Blockchain en nuestro blog.</p>
+    <section class="section content content--blog"> <!--Blog-->
+      <div class="container content__inner">
 
-    <article>
-      <h3>Lo último en Desarrollo FullStack</h3>
-      <p>Para estar a la última en el mundo web</p>
-        <p><a href="/pages/blog/blog1.html">Ver noticia</a></p>
-    </article>
+        <header class="content__header">
+          <h2 class="content__title">Últimas noticias</h2>
+        </header>
+        <p class="content__intro">
+            Descubre lo último en FullStack y Blockchain en nuestro blog.
+        </p>
 
-    <article>
-      <h3>Lo último en Blockchain</h3>
-      <p>Mantente al día de los cambios acerca de la Blockchain</p>
-        <p><a href="/pages/blog/blog2.html">Ver noticia</a></p>
-    </article>
-    
-    <p>Si quieres ver todos nuestros post haz <a href="/pages/blog/">click aquí</a></p>
+        <div class="content__list card-list">
 
+          <article class="card">
+            <img class="card__media" src="/ConquerX_CSS5/assets/flujo-DvAyveir.jpg" alt="Noticia Desarrollo FullStack">
+            <div class="card__body">
+              <h3 class="card__title">Lo último en Desarrollo FullStack</h3>
+              <p class="card__text">Para estar a la última en el mundo web.</p>
+              <a class="btn btn--secondary card__cta" href="/pages/blog/blog1.html">Ver noticia</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="/ConquerX_CSS5/assets/eth-Cj2_k1bD.png" alt="Noticia Blockchain">
+            <div class="card__body">
+              <h3 class="card__title">Lo último en Blockchain</h3>
+              <p class="card__text">Mantente al día de los cambios acerca de la Blockchain.</p>
+              <a class="btn btn--secondary card__cta" href="/pages/blog/blog2.html">Ver noticia</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="content__footer">
+          <a href="/pages/blog.html" class="btn btn--primary btn--block">
+            Ver todas las noticias
+          </a>
+        </div>
+
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    © Conquer Blocks 2026 - <a href="/pages/aviso-legal.html">Aviso Legal</a>
-  </footer>
+  <div data-footer></div>
 
 </body>
 

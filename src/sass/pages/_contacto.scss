@@ -5,9 +5,7 @@
     background-color: t.$color-background-secondary;
     padding: t.$space-xl 0;
 
-    background-image: url('../../img/mob/pattern-rings.png');
-    background-repeat: no-repeat;
-    background-position: left 0 bottom 240px;
+   
 
     &__container {
       text-align: center;
@@ -94,9 +92,6 @@
 
     @include m.breakpoint(desktop) {
       padding: t.$space-xl 0;
-
-      background-image: url('../../img/des/pattern-rings.png');
-      background-position: left 0 bottom 220px;
 
       &__container,
       &__bottom {
