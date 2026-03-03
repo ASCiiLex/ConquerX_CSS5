@@ -12,8 +12,15 @@
   font-weight: t.$fw-medium;
   text-decoration: none;
 
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
+
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: t.$fs-body-m;
+  line-height: 1;
+  appearance: none;
 
   transition: t.$transition-base;
 }
@@ -44,6 +51,20 @@
     color: t.$color-text-primary;
   }
 }
+
+/*  GHOST – Borrar */
+
+.btn--ghost {
+  background: transparent;
+  color: t.$color-text-primary;
+  border: 2px solid t.$color-background-button;
+
+  &:hover {
+    background: t.$color-text-primary;
+    color: t.$color-text-secondary;
+  }
+}
+
 
 /* Full width */
 

@@ -13,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     gap: t.$space-lg;
+    margin-bottom: t.$space-md;
   }
  
   &__title {
@@ -53,7 +54,6 @@
 
 .btn--secondary {
   order: 5;
-  margin-bottom: t.$space-md;
 }
 
 
