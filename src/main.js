@@ -1,36 +1,13 @@
 import './sass/main.scss'
 
-async function loadComponent(selector, path) {
-  const element = document.querySelector(selector)
-  if (!element) return
-
-  try {
-    const response = await fetch(`${import.meta.env.BASE_URL}${path}`)
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)
-    }
-    const html = await response.text()
-    element.innerHTML = html
-  } catch (error) {
-    console.error(`Error loading ${path}:`, error)
-  }
-}
-
-async function initLayout() {
-  await loadComponent('[data-header]', 'src/components/header.html')
-  await loadComponent('[data-footer]', 'src/components/footer.html')
-
-  setActiveNavLink()
-  initHeaderInteractions()
-}
-
 function setActiveNavLink() {
-  const currentPath = window.location.pathname
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+  const currentPath = window.location.pathname.replace(base, '')
 
   const navLinks = document.querySelectorAll('header nav a')
 
   navLinks.forEach(link => {
-    const linkPath = new URL(link.href).pathname
+    const linkPath = new URL(link.href).pathname.replace(base, '')
 
     if (linkPath === currentPath) {
       link.classList.add('active')
@@ -51,32 +28,26 @@ function initHeaderInteractions() {
     header.classList.add('header--open')
     toggle.setAttribute('aria-expanded', true)
     document.body.classList.add('menu-open')
-
-    const firstLink = nav.querySelector('a')
-    if (firstLink) firstLink.focus()
   }
 
   function closeMenu() {
     header.classList.remove('header--open')
     toggle.setAttribute('aria-expanded', false)
     document.body.classList.remove('menu-open')
-    toggle.focus()
   }
 
   toggle.addEventListener('click', () => {
-    const isOpen = header.classList.contains('header--open')
-    isOpen ? closeMenu() : openMenu()
+    header.classList.contains('header--open') ? closeMenu() : openMenu()
   })
 
-  if (overlay) {
-    overlay.addEventListener('click', closeMenu)
-  }
+  if (overlay) overlay.addEventListener('click', closeMenu)
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && header.classList.contains('header--open')) {
-      closeMenu()
-    }
+    if (e.key === 'Escape') closeMenu()
   })
 }
 
-document.addEventListener('DOMContentLoaded', initLayout)
+document.addEventListener('DOMContentLoaded', () => {
+  setActiveNavLink()
+  initHeaderInteractions()
+})
