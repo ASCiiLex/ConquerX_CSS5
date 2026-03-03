@@ -8,17 +8,65 @@
 
   <meta name="description" content="Descubre lo último en FullStack y Blockchain Developer">
 
- <link rel="icon" href="/icono.png" type="image/png">
+ <link rel="icon" href="/ConquerX_CSS5/icono.png" type="image/png">
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" crossorigin src="/ConquerX_CSS5/assets/main-C00yr3zY.js"></script>
+  <link rel="stylesheet" crossorigin href="/ConquerX_CSS5/assets/main-BNzcSVVa.css">
 </head>
 
 <body>
 
-  <div data-header></div>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__inner">
+
+        <figure class="header__logo">
+          <a href="/">
+            <img 
+              src="../../logo-Conquer-Blocks.avif" 
+              alt="Logotipo de Conquer Blocks"
+              width="250"
+            />
+          </a>
+        </figure>
+
+        <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-navigation" class="header__nav">
+          <ul class="header__menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/quienes-somos.html">Quienes somos</a></li>
+            <li><a href="/pages/cursos.html">Cursos</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="/pages/registro.html">Registro</a></li>
+            <li><a href="/pages/login.html">Login</a></li>
+            <li><a href="/pages/contacto.html">Contacto</a></li>
+          </ul>
+
+          <div class="header__social">
+            <a href="https://github.com/ConquerBlocks/" class="social__link">
+              <img src="/ConquerX_CSS5/icons/social/icon-github.svg" alt=""></a>
+            <a href="https://x.com/ConquerBlocks" class="social__link">
+              <img src="/ConquerX_CSS5/icons/social/icon-twitter.svg" alt=""></a>
+            <a href="https://es.linkedin.com/company/conquer-x" class="social__link">
+              <img src="/ConquerX_CSS5/icons/social/icon-linkedin.svg" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCY6ncOO-7C107IR3E63EDBw" class="social__link">
+              <img class="youtube" src="/ConquerX_CSS5/icons/social/icon-youtube.svg" alt=""></a>
+          </div>
+        </nav>
+        
+        <div class="header__overlay"></div>
+
+      </div>
+    </div>
+  </header>
   
   <main>
     <section class="page-hero">
@@ -60,7 +108,7 @@
             Así que como veis, partimos de una diferencia bastante clara entre ambas y es la forma que tenemos de acceder a la información en ambas redes, que un caso es completamente libre y en el otro, necesitamos permisos.
           </p>
 
-          <img src="../../src/assets/img/blog/blog2/pub-vs-priv.jpeg" alt="Pública-vs-Privada" class="blog__image">
+          <img src="/ConquerX_CSS5/assets/pub-vs-priv-B_tMUXE0.jpeg" alt="Pública-vs-Privada" class="blog__image">
 
           <p>
             Este es un punto clave que las empresas tienen en cuenta a la hora de aplicar la tecnología blockchain en sus actividades comerciales, y va a depender mucho de los requerimientos de cada proyecto el uso de una u otra. Por ejemplo, Hyperledger se usa mucho en ámbitos internos de las empresas, para gestionar información que sea confidencial y crítica para la empresa. Por otro lado, Ethereum y sus redes derivadas, es más adecuado para el desarrollo de aplicaciones descentralizadas cuya información almacenada no supone un peligro para la empresa o para los propios usuarios que interactúan con ellas.
@@ -76,7 +124,7 @@
             Si hablamos de Hyperledger Fabric, nos encontramos con una red que utiliza un mecanismo de consenso que se lama Practical Byzantine Fault Tolerance. Este algoritmo garantiza la tolerancia a las conocidas fallas bizantinas. Estas fallas bizantinas, en el contexto de la tecnología, se refieren a errores de un sistema que tienen lugar cuando los nodos que forman parte de este sistema funcionan de forma incorrecta y envían información errónea o contradictoria. A muchos probablemente os suene este nombre porque deriva de la famosa paradoja del “problema bizantino”.
           </p>
 
-          <img src="../../src/assets/img/blog/blog2/Byzantine-Fault-Tolerance.png" alt="Problema-Bizantino" class="blog__image">
+          <img src="/ConquerX_CSS5/assets/Byzantine-Fault-Tolerance-Ve-PPtOE.png" alt="Problema-Bizantino" class="blog__image">
           
           <p>
             Este algoritmo de consenso garantiza un procesamiento bastante rápido de las transacciones y por lo tanto, un rendimiento bastante elevado alto.
@@ -149,7 +197,26 @@
   </main>
 
   
-  <div data-footer></div>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__inner">
+        <div class="social">
+          <a href="https://github.com/ConquerBlocks/" class="social__link">
+            <img src="/ConquerX_CSS5/icons/social/icon-github.svg" alt=""></a>
+          <a href="https://x.com/ConquerBlocks" class="social__link">
+            <img src="/ConquerX_CSS5/icons/social/icon-twitter.svg" alt=""></a>
+          <a href="https://es.linkedin.com/company/conquer-x" class="social__link">
+            <img src="/ConquerX_CSS5/icons/social/icon-linkedin.svg" alt=""></a>
+          <a href="https://www.youtube.com/channel/UCY6ncOO-7C107IR3E63EDBw" class="social__link">
+            <img class="youtube" src="/ConquerX_CSS5/icons/social/icon-youtube.svg" alt=""></a>
+        </div>
+        <p class="footer__text">
+          © Conquer Blocks 2026 - 
+          <a href="pages/aviso-legal.html">Aviso Legal</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
